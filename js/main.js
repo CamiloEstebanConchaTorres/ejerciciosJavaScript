@@ -1,18 +1,19 @@
 
-// import prompt from "prompt-sync";
-
-// let app = prompt();
-// console.log("how many more times?");
-// let n = app('');
-
 
   import prompt from "prompt-sync"
-
+  import contrasenaVAlida from "./modules/contrasena.js"
   let input = prompt();
-  let nombre = input('Ingrese el nombre: ');
-  let edad = Number(input('Ingrese la edad: '));
-  console.log(nombre);
-  console.log(edad);
+  let opc = undefined;
+
+
+  do{
+    let data = input("ingrese la contrasena: ");
+    console.log(contrasenaVAlida(data));
+    console.log('1. Repetir la validacion\n0. Terminar');
+    opc = Number(input()); 
+  }while(opc)
+
+
 
 
 
